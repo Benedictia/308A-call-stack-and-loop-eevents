@@ -55,6 +55,7 @@ console.log(trampoline(nestedArray))
 
 //Part 3: Deferred Execution
 const primeListElement = document.getElementById('primeList');
+const calculateButton = document.getElementById('calculateButton');
 
 // Function to check if a number is prime
 function isPrime(num) {
@@ -79,3 +80,11 @@ function calculatePrimes(n) {
     alert('Calculation is finished!');
 }
 calculateButton.addEventListener('click', () => calculatePrimes(10000));
+
+
+
+
+
+
+
+
