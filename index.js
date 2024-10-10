@@ -19,9 +19,10 @@ function incrementCounter() {
 
 // Start the recursive function
 incrementCounter();
+
 //Part 2: Trampolines
 // A  recursive function using trampolining
-let nestedArray = [1, [2, [3, 4]], [5, [6, [7, 8]]]];
+let nestedArray = [[1, 2], [3, [4, [5, [6]]]], 7];
 //using recursion
 
 function recur(a) {
@@ -49,6 +50,32 @@ function trampoline(fn){
         return result;
     }
 }
+
 console.log(trampoline(nestedArray))
 
 //Part 3: Deferred Execution
+const primeListElement = document.getElementById('primeList');
+
+// Function to check if a number is prime
+function isPrime(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+// Function to find and display prime numbers
+let n=10000
+function calculatePrimes(n) {
+    let primes = [];
+    for (let i = 1; i <= n; i++) {
+        if (isPrime(i)) {
+            primes.push(i);
+        }
+    }
+    // Display the prime numbers in the HTML element
+    primeListElement.innerHTML = 'Prime numbers: ' + primes.join(', ');
+    alert('Calculation is finished!');
+}
+calculateButton.addEventListener('click', () => calculatePrimes(10000));
