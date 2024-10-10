@@ -7,8 +7,6 @@ function incrementCounter() {
     try {
  // Increment the counter
         counter++;
-        
- // Call the function recursively
         incrementCounter();
     } catch (error) {
 // Log the error and the value of the counter
@@ -17,7 +15,6 @@ function incrementCounter() {
     }
 }
 
-// Start the recursive function
 incrementCounter();
 
 //Part 2: Trampolines
