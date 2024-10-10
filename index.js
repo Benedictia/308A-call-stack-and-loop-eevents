@@ -79,9 +79,8 @@ function calculatePrimes(n) {
     primeListElement.innerHTML = 'Prime numbers: ' + primes.join(', ');
     alert('Calculation is finished!');
 }
+
 calculateButton.addEventListener('click', () => calculatePrimes(10000));
-
-
 
 
 
